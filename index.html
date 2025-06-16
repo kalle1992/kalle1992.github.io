@@ -2,80 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vuokatin amis</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>My first website</title>
+  <meta name="viewport" content="width=240, initial-scale=1, maximum-scale=1">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
       font-size: 12px;
-      background: #003366;
+      background: #2d27c4;
       color: #111;
     }
-
     .container {
-      width: 100%;
-      max-width: 240px;
-      background: #ffffff;
+      width: 240px;
+      background: #fff;
       margin: 0 auto;
-      border: 1px solid #999;
+      border: 1.5px solid #444;
       box-sizing: border-box;
-      box-shadow: 0 0 6px #333;
+      box-shadow: 0 0 8px #444;
+      padding: 0 0 6px 0;
+      overflow: hidden;
     }
-
     .banner {
       width: 100%;
-      height: auto;
-      background: #001f33;
-      border-bottom: 2px solid #234076;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 2px solid #234076;
-    }
-
-    .title-bar {
-      background: #003366;
-      color: #fff;
-      font-size: 1.1em;
-      font-weight: bold;
-      padding: 6px 8px;
-      box-sizing: border-box;
-      border-bottom: 1px solid #234076;
-    }
-
-    .nav-strip {
+      position: relative;
       background: #234076;
-      height: 8px;
-      border-bottom: 1px solid #234076;
     }
-
+    .banner-photo {
+      width: 100%;
+      height: 48px;
+      object-fit: cover;
+      display: block;
+      background: #234076;
+    }
+    .banner-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 48px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      padding: 4px 8px 0 8px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+    .banner-logo {
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #444;
+      box-shadow: 0 0 2px #444;
+      flex-shrink: 0;
+    }
+    .banner-logo img {
+      width: 26px;
+      height: 26px;
+      display: block;
+    }
+    .banner-title {
+      color: #fff;
+      font-size: 1.05em;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #444a;
+      letter-spacing: 1px;
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .gradient-bar {
+      width: 100%;
+      height: 14px;
+      background: linear-gradient(90deg, #4588c1 0%, #1c314a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4px;
+      /* You can put buttons/links inside here */
+      padding: 0 4px;
+      box-sizing: border-box;
+    }
+    .nav-btn {
+      color: #fff;
+      background: rgba(0,0,0,0.2);
+      border: none;
+      border-radius: 3px;
+      font-size: 10px;
+      padding: 2px 6px;
+      margin-right: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.2);
+      color: #ffff9c;
+    }
+    .content {
+      padding: 0 8px;
+    }
     h1 {
       margin: 10px 0 4px 0;
       color: #234076;
+      text-align: left;
       font-size: 1em;
     }
-
     h2 {
       margin: 14px 0 6px 0;
       color: #234076;
       text-align: center;
       font-size: 0.95em;
     }
-
-    .content {
-      padding: 0 8px;
-    }
-
     p {
       line-height: 1.4;
       margin-bottom: 8px;
     }
-
     .footer {
       text-align: center;
       color: #234076;
@@ -89,18 +137,30 @@
 <body>
   <div class="container">
     <div class="banner">
-      <img src="bannerphoto.jpg" alt="Datsun Banner">
+      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
+      <div class="banner-overlay">
+        <div class="banner-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
+        </div>
+        <span class="banner-title">My First Website</span>
+      </div>
     </div>
-    <div class="title-bar">Vuokatin amis</div>
-    <div class="nav-strip"></div>
+    <div class="gradient-bar">
+      <!-- Example buttons/links, remove or change as you like -->
+      <a href="#" class="nav-btn">Home</a>
+      <a href="#" class="nav-btn">Downloads</a>
+      <a href="#" class="nav-btn">Screenshots</a>
+      <a href="#" class="nav-btn">FAQ</a>
+      <a href="#" class="nav-btn">Contact</a>
+    </div>
     <div class="content">
-      <h1>Tervetuloa sivustolle Vuokatin amis</h1>
-      <p>Suomen kieli koulun</p>
-      <h2>Changelog</h2>
-      <p>Coming soon!</p>
+      <h1>Welcome to My Classic Site!</h1>
+      <p>This website is inspired by classic early-2000s web design, just like the original My Summer Car site.</p>
+      <h2>News</h2>
+      <p>Stay tuned for updates and new downloads!</p>
     </div>
     <div class="footer">
-      &copy; 1995 | Nokia 110 4g optimized
+      &copy; 1992 Kalle | Made with GitHub Pages
     </div>
   </div>
 </body>
