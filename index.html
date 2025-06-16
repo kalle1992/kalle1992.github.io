@@ -2,16 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vuokatin amis</title>
+  <title>Kallen verkkosivuilla</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      font-size: 9px; /* Slightly smaller */
+      font-size: 11px;
       background: #2d27c4;
       color: #111;
+    }
+    .top-logo-area {
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .site-logo {
+      width: 60px;   /* Adjust as needed */
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 2px;
+      display: block;
+    }
+    .banner-area {
+      width: 100%;
+      max-width: 240px;
+      position: relative;
+      margin: 0 auto;
+    }
+    .banner-photo {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+    }
+    .banner-title {
+      position: absolute;
+      bottom: 8px;
+      left: 12px;
+      color: #fff;
+      font-size: 1.05em;
+      font-weight: bold;
+      background: rgba(35, 64, 118, 0.8);
+      padding: 4px 10px 3px 10px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      box-shadow: 0 2px 6px rgba(35,64,118,0.25);
+      text-shadow: 0 2px 7px #234076;
+      /* styled to mimic the look of the reference site */
+    }
+    .svg-divider {
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+      line-height: 0;
+      position: relative;
+      z-index: 1;
     }
     .container {
       width: 100%;
@@ -19,45 +75,34 @@
       min-width: 0;
       background: #fff;
       margin: 0 auto;
-    }
-    .banner-photo {
-      width: 100%;
-      max-width: 240px;
-      height: auto;
-      display: block;
-    }
-    .banner-title {
-      color: #234076;
-      font-size: 1em; /* Made smaller */
-      font-weight: bold;
-      position: absolute;
-      top: 2px;     /* Move up/down */
-      left: 8px;    /* Move left/right */
-      margin: 0;    /* Remove margin */
-      text-align: left;
-      display: block;
-      line-height: 1.1;
+      border: 1px solid #aaa;
+      box-sizing: border-box;
+      box-shadow: 0 0 8px #567;
+      padding: 0 0 6px 0;
+      border-top: none;
+      position: relative;
+      z-index: 0;
     }
     .content {
       padding: 0 8px;
     }
     h1 {
-      margin: 8px 0 3px 0;
+      margin: 10px 0 4px 0;
       color: #234076;
       text-align: left;
-      font-size: 0.92em; /* Smaller title */
+      font-size: 0.92em;
       font-weight: bold;
     }
     h2 {
-      margin: 12px 0 5px 0;
+      margin: 14px 0 6px 0;
       color: #234076;
       text-align: center;
-      font-size: 0.9em; /* Slightly smaller */
+      font-size: 0.9em;
     }
     p {
       line-height: 1.35;
       margin-bottom: 7px;
-      font-size: 0.97em; /* Slightly smaller normal text */
+      font-size: 0.97em;
     }
     .footer {
       text-align: center;
@@ -70,9 +115,30 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <!-- Top Logo Area (space for your logo above the banner) -->
+  <div class="top-logo-area">
+    <!-- Replace logo.png with your logo file (leave empty src if you want to add later) -->
+    <img src="logo.png" alt="Site Logo" class="site-logo">
+  </div>
+  <!-- Banner area with title over the banner photo -->
+  <div class="banner-area">
     <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
-    <span class="banner-title">Vuokatin amis</span>
+    <span class="banner-title">Kallen verkkosivuilla</span>
+  </div>
+  <!-- Decorative SVG divider -->
+  <div class="svg-divider">
+    <svg viewBox="0 0 240 32" width="100%" height="32" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dividerGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#234076" stop-opacity="0.16"/>
+          <stop offset="100%" stop-color="#fff" stop-opacity="0.85"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0 Q60 32 120 16 Q180 0 240 32 V32 H0 Z" fill="url(#dividerGradient)"/>
+    </svg>
+  </div>
+  <!-- Main page content -->
+  <div class="container">
     <div class="content">
       <h1>Welcome to My Classic Site!</h1>
       <p>This website is inspired by classic early-2000s web design.</p>
