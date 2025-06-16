@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My first website</title>
+  <title>Kallen verkkosivuilla</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        background: #2d27c4;
-        color: #111;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      background: #2d27c4;
+      color: #111;
     }
     .container {
       width: 100%;
@@ -24,48 +24,23 @@
       box-shadow: 0 0 8px #567;
       padding: 0 0 6px 0;
     }
-    .banner {
+    .banner-photo {
       width: 100%;
-      background: #2d27c4;
-      padding: 0;
-      margin: 0;
-      border-bottom: 2px solid #234076;
-      box-sizing: border-box;
+      max-width: 240px;
+      height: auto;
+      display: block;
     }
     .banner-title {
-      color: #fff;
+      color: #234076;
       font-size: 1.1em;
       font-weight: bold;
-      margin: 0;
-      padding: 8px 0 6px 8px;
+      margin: 10px 0 6px 8px;
       text-align: left;
       display: block;
       line-height: 1.2;
     }
-    .nav-buttons-row {
-      width: 100%;
-      background: #2d27c4;
-      text-align: left;
-      padding: 0 0 4px 8px;
-      box-sizing: border-box;
-    }
-    .nav-btn {
-      background: #234076;
-      color: #fff;
-      border: none;
-      border-radius: 2px;
-      padding: 1px 4px;    /* smaller! */
-      font-size: 9px;      /* smaller! */
-      cursor: pointer;
-      text-decoration: none;
-      margin-right: 6px;
-      margin-bottom: 2px;
-      display: inline-block;
-      transition: background 0.2s;
-}
-    }
-    .nav-btn:hover {
-      background: #355899;
+    .content {
+      padding: 0 8px;
     }
     h1 {
       margin: 10px 0 4px 0;
@@ -78,9 +53,6 @@
       color: #234076;
       text-align: center;
       font-size: 0.95em;
-    }
-    .content {
-      padding: 0 8px;
     }
     p {
       line-height: 1.4;
@@ -98,21 +70,16 @@
 </head>
 <body>
   <div class="container">
-    <div class="banner">
-      <span class="banner-title">My first website</span>
-      <div class="nav-buttons-row">
-        <a href="#" class="nav-btn">Projects</a>
-        <a href="#" class="nav-btn">Photos</a>
-      </div>
-    </div>
+    <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
+    <span class="banner-title">Kallen verkkosivuilla</span>
     <div class="content">
       <h1>Welcome to My Classic Site!</h1>
-      <p>This website is inspired by classic early-2000s web design, just like the original My Summer Car site.</p>
-      <h2>News</h2>
-      <p>Stay tuned for updates and new downloads!</p>
+      <p>This website is inspired by classic early-2000s web design.</p>
+      <h2>Changelog</h2>
+      <p>Stay tuned for updates!</p>
     </div>
     <div class="footer">
-      &copy; 1992 Kalle | Made with GitHub Pages
+      &copy; kesä 1995 Kalle | Made with GitHub Pages
     </div>
   </div>
 </body>
