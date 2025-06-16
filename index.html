@@ -38,7 +38,7 @@
     }
     .banner-title {
       position: absolute;
-      bottom: 12px;
+      bottom: 18px; /* Moved title up slightly (was 12px) */
       left: 12px;
       color: #fff;
       font-size: 1.05em;
@@ -48,31 +48,7 @@
       border-radius: 4px;
       letter-spacing: 1px;
       line-height: 1.1;
-      /* No box-shadow or text-shadow for a cleaner look */
     }
-    /* SVG divider: clean arc, half on background, half on white */
-    .svg-divider-wrap {
-      width: 100vw;
-      min-width: 240px;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      z-index: 1;
-      background: transparent;
-      pointer-events: none;
-      height: 40px;
-      overflow: visible;
-      display: flex;
-      justify-content: center;
-    }
-    .svg-divider {
-      width: 240px;
-      height: 40px;
-      display: block;
-    }
-    /* Content area: cut off under SVG using border-radius for clean transition */
     .container {
       width: 100%;
       max-width: 240px;
@@ -126,19 +102,6 @@
       <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
       <span class="banner-title">Kallen verkkosivuilla</span>
     </div>
-  </div>
-  <!-- Clean arc SVG divider, half over background, half over white -->
-  <div class="svg-divider-wrap" aria-hidden="true">
-    <svg class="svg-divider" viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="arcGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
-          <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
-        </linearGradient>
-      </defs>
-      <!-- Arc: starts on background, ends on white, for clean transition -->
-      <path d="M0,30 Q120,60 240,30 L240,40 L0,40 Z" fill="url(#arcGradient)" />
-    </svg>
   </div>
   <div class="container">
     <div class="content">
