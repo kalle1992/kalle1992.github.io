@@ -17,121 +17,66 @@
       width: 240px;
       background: #fff;
       margin: 0 auto;
-      border: 1.5px solid #444;
+      border: 1px solid #444;
       box-sizing: border-box;
-      box-shadow: 0 0 8px #444;
       padding: 0 0 6px 0;
       overflow: hidden;
-    }
-    .banner {
-      width: 100%;
-      position: relative;
-      background: #234076;
     }
     .banner-photo {
       width: 100%;
       height: 48px;
-      object-fit: cover;
       display: block;
       background: #234076;
     }
-    .banner-overlay {
-      position: absolute;
-      top: 0; left: 0;
+    .banner-bar {
       width: 100%;
-      height: 48px;
-      z-index: 2;
+      height: 16px;
+      background: #234076;
       display: flex;
       align-items: center;
-      padding: 4px 8px 0 8px;
+      justify-content: space-between;
       box-sizing: border-box;
-      pointer-events: none;
-    }
-    .banner-logo {
-      width: 32px;
-      height: 32px;
-      background: #fff;
-      border-radius: 50%;
-      margin-right: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid #444;
-      box-shadow: 0 0 2px #444;
-      flex-shrink: 0;
-    }
-    .banner-logo img {
-      width: 26px;
-      height: 26px;
-      display: block;
+      padding: 0 4px;
     }
     .banner-title {
       color: #fff;
-      font-size: 1.05em;
+      font-size: 1em;
       font-weight: bold;
-      text-shadow: 1px 1px 2px #444a;
       letter-spacing: 1px;
-      flex-grow: 1;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .lang-icons {
+    .flags {
       display: flex;
       gap: 2px;
-      position: absolute;
-      top: 6px;
-      right: 8px;
-      z-index: 3;
-      pointer-events: auto;
     }
-    .lang-flag {
-      width: 18px;
-      height: 12px;
+    .flag-link img {
+      width: 16px;
+      height: 11px;
+      display: block;
       border: 1px solid #eee;
-      border-radius: 2px;
       background: #fff;
-      margin-left: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 2px #4444;
-      cursor: pointer;
-      transition: filter 0.2s;
     }
-    .lang-flag:hover {
-      filter: brightness(1.2) drop-shadow(0 0 2px #234076);
-    }
-    .gradient-bar {
+    .nav-bar {
       width: 100%;
-      height: 14px;
-      background: #234076; /* solid color, matches your banner */
-      /* ...rest unchanged */
-    }
+      height: 16px;
+      background: #2d27c4;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 4px;
-      /* You can put buttons/links inside here */
       padding: 0 4px;
       box-sizing: border-box;
     }
     .nav-btn {
       color: #fff;
-      background: rgba(0,0,0,0.2);
+      background: #234076;
       border: none;
-      border-radius: 3px;
       font-size: 10px;
-      padding: 2px 6px;
+      padding: 2px 5px;
       margin-right: 2px;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s;
-    }
-    .nav-btn:hover {
-      background: rgba(255,255,255,0.2);
-      color: #ffff9c;
     }
     .content {
       padding: 0 8px;
@@ -164,26 +109,19 @@
 </head>
 <body>
   <div class="container">
-    <div class="banner">
-      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
-      <div class="banner-overlay">
-        <div class="banner-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
-        </div>
-        <span class="banner-title">My First Website</span>
-      </div>
-      <div class="lang-icons">
-        <!-- Dutch flag -->
-        <a href="index-nl.html" title="Nederlands" class="lang-flag">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg" alt="NL" width="18" height="12" style="display:block;">
+    <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
+    <div class="banner-bar">
+      <span class="banner-title">My First Website</span>
+      <span class="flags">
+        <a href="index-nl.html" title="Nederlands" class="flag-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg" alt="NL">
         </a>
-        <!-- Finnish flag -->
-        <a href="index-fi.html" title="Suomi" class="lang-flag">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg" alt="FI" width="18" height="12" style="display:block;">
+        <a href="index-fi.html" title="Suomi" class="flag-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg" alt="FI">
         </a>
-      </div>
+      </span>
     </div>
-    <div class="gradient-bar">
+    <div class="nav-bar">
       <a href="#" class="nav-btn">Home</a>
       <a href="#" class="nav-btn">Projects</a>
       <a href="#" class="nav-btn">Photos</a>
