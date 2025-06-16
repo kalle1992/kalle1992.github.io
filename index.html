@@ -1,95 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>My Cool Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Add some basic styles for a clean look -->
-    <style>
-      body {
-        font-family: 'monospace', Lucida Console, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f4f8fb;
-        color: #222;
-      }
-      header {
-        background: #2d72d9;
-        color: white;
-        padding: 2rem 1rem 1rem 1rem;
-        text-align: center;
-      }
-      h1 {
-        margin: 0.5rem 0 0.2rem 0;
-      }
-      nav {
-        background: #244a7b;
-        padding: 0.5rem 0;
-        text-align: center;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 1rem;
-        font-weight: bold;
-        transition: color 0.2s;
-      }
-      nav a:hover {
-        color: #ffd700;
-      }
-      main {
-        max-width: 700px;
-        margin: 2rem auto;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 0 8px rgba(0,0,0,0.07);
-        padding: 2rem;
-      }
-      footer {
-        text-align: center;
-        padding: 1rem;
-        background: #eee;
-        color: #555;
-        margin-top: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>My Cool Website</h1>
-      <p>Welcome to my personal project on GitHub Pages!</p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>My first website</title>
+  <meta name="viewport" content="width=800">
+  <style>
+    body {
+      background: #a3b8d6;
+      margin: 0;
+      font-family: Verdana, Arial, sans-serif;
+    }
+    .container {
+      width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      border: 2px solid #234076;
+      box-shadow: 0 0 18px #567;
+      padding: 0 0 16px 0;
+    }
+    .banner {
+      width: 100%;
+      height: 110px;
+      background: #2d27c4; /* Replace with any color you like */
+      border-bottom: 2px solid #234076;
+    }
+    nav {
+      background: #234076;
+      padding: 6px 0;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffff9c;
+    }
+    h1, h2 {
+      margin: 24px 0 12px 0;
+      color: #234076;
+      text-align: center;
+    }
+    .content {
+      padding: 0 32px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .footer {
+      text-align: center;
+      color: #234076;
+      font-size: 0.9em;
+      border-top: 1px solid #234076;
+      margin-top: 24px;
+      padding-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="banner"></div>
     <nav>
       <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Downloads</a>
+      <a href="#">Screenshots</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
     </nav>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hi! I'm learning programming and web development. This site is my playground for experimenting with HTML, CSS, and GitHub Pages.
-        </p>
-      </section>
-
-      <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-          <li><strong>Personal Website</strong> – This site, built from scratch!</li>
-          <li><strong>JavaScript Mini-Apps</strong> – Coming soon...</li>
-        </ul>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          You can reach me via my <a href="https://github.com/kalle1992" target="_blank">GitHub profile</a>.
-        </p>
-      </section>
-    </main>
-    <footer>
-      &copy; 1995 kalle1992 | Built with HTML & CSS on GitHub Pages
-    </footer>
-  </body>
+    <div class="content">
+      <h1>Welcome to My Classic Site!</h1>
+      <p>This website is inspired by classic early-2000s web design, just like the original My Summer Car site.</p>
+      <h2>News</h2>
+      <p>Stay tuned for updates and new downloads!</p>
+    </div>
+    <div class="footer">
+      &copy; 1992 Kalle | Made with github sites
+    </div>
+  </div>
+</body>
 </html>
