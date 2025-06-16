@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>My first website</title>
-  <meta name="viewport" content="width=800">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
-      background: #a3b8d6;
-      margin: 0;
-      font-family: Verdana, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        background: #2d27c4;
+        color: #111;
     }
     .container {
-      width: 800px;
-      margin: 30px auto;
+      width: 100%;
+      max-width: 240px;
+      min-width: 0;
       background: #fff;
-      border: 2px solid #234076;
+      margin: 0 auto;
+      border: 1px solid #aaa;
+      box-sizing: border-box;
       box-shadow: 0 0 18px #567;
-      padding: 0 0 16px 0;
+      padding: 0 0 6px 0;
     }
     .banner {
       width: 100%;
-      height: 110px;
+      height: 48px;
       background: #2d27c4; /* Replace with any color you like */
       border-bottom: 2px solid #234076;
     }
     nav {
       background: #234076;
-      padding: 6px 0;
+      padding: 2px 0;
       text-align: center;
       margin-bottom: 15px;
     }
