@@ -6,95 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      background: #2d27c4;
-      color: #111;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        background: #2d27c4;
+        color: #111;
     }
     .container {
-      width: 240px; /* Fixed width for 240px screens */
+      width: 100%;
+      max-width: 240px;
+      min-width: 0;
       background: #fff;
       margin: 0 auto;
-      border: 1.5px solid #444; /* Darker grey border */
+      border: 1px solid #aaa;
       box-sizing: border-box;
-      box-shadow: 0 0 8px #444; /* Darker grey shadow */
+      box-shadow: 0 0 8px #567;
       padding: 0 0 6px 0;
-      overflow: hidden;
-      /* Remove max-width/min-width, use fixed width to ensure border/shadow are visible */
     }
     .banner {
       width: 100%;
-      position: relative;
-      background: linear-gradient(90deg, #4588c1 0%, #1c314a 100%);
-      min-height: 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: flex-end;
+      height: 16px; /* Less big */
+      background: #2d27c4;
+      border-bottom: 2px solid #234076;
     }
-    .banner-photo {
+    .title-bar {
       width: 100%;
-      height: 48px; /* Adjust to your image height */
-      object-fit: cover;
-      display: block;
-      border-bottom: none;
-      /* No border here, it will blend into the gradient below */
-    }
-    .banner-content {
-      display: flex;
-      align-items: center;
-      padding: 2px 6px 0 8px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      width: 100%;
-      height: 48px;
-      pointer-events: none; /* Makes sure it doesn't block image */
-    }
-    .banner-logo {
-      width: 32px;
-      height: 32px;
-      background: #fff;
-      border-radius: 50%;
-      margin-right: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid #444;
-      flex-shrink: 0;
-      box-shadow: 0 0 2px #444;
-    }
-    .banner-logo img {
-      width: 26px;
-      height: 26px;
-      display: block;
-    }
-    .banner-title {
+      background: #2d27c4;
       color: #fff;
-      font-size: 1.05em;
+      font-size: 1.1em;
       font-weight: bold;
-      text-shadow: 1px 1px 2px #444a;
-      letter-spacing: 1px;
-      flex-grow: 1;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin: 0;
+      text-align: left;
+      padding: 6px 0 6px 8px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #234076;
     }
-    /* SVG curve style */
-    .banner-curve {
-      display: block;
+    .nav-strip {
       width: 100%;
-      height: 16px;
-      position: relative;
-      top: -2px;
-      z-index: 1;
-    }
-    .content {
-      padding: 0 8px;
+      background: #234076;
+      height: 8px;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #234076;
     }
     h1 {
       margin: 10px 0 4px 0;
@@ -107,6 +61,9 @@
       color: #234076;
       text-align: center;
       font-size: 0.95em;
+    }
+    .content {
+      padding: 0 8px;
     }
     p {
       line-height: 1.4;
@@ -124,36 +81,12 @@
 </head>
 <body>
   <div class="container">
-    <div class="banner">
-      <!-- Optional: Add your banner photo here! Replace 'bannerphoto.jpg' with your file. -->
-      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
-      
-      <!-- (Optional) Overlay logo/title on the banner photo. If you want ONLY the photo, you may remove this. -->
-      <!--
-      <div class="banner-content">
-        <div class="banner-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
-        </div>
-        <span class="banner-title">My First Website</span>
-      </div>
-      -->
-      
-      <!-- SVG slanted curving gradient line with darker grey stroke -->
-      <svg class="banner-curve" viewBox="0 0 240 16" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="curveGradient" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#4588c1"/>
-            <stop offset="100%" stop-color="#1c314a"/>
-          </linearGradient>
-        </defs>
-        <path d="M0,8 Q60,20 240,2 L240,16 L0,16 Z"
-              fill="url(#curveGradient)" />
-        <path d="M0,8 Q60,20 240,2" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
-      </svg>
-    </div>
+    <div class="banner"></div>
+    <div class="title-bar">My first website</div>
+    <div class="nav-strip"></div>
     <div class="content">
       <h1>Welcome to My Classic Site!</h1>
-      <p>This website is inspired by classic early-2000s web design, just like the original My Summer Car site.</p>
+      <p>This website is inspired by classic early-2000s web design.</p>
       <h2>News</h2>
       <p>Stay tuned for updates and new downloads!</p>
     </div>
