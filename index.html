@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My first website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=240, initial-scale=1, maximum-scale=1">
   <style>
     body {
       margin: 0;
@@ -14,45 +14,48 @@
       color: #111;
     }
     .container {
-      width: 240px; /* Fixed width for 240px screens */
+      width: 240px;
       background: #fff;
       margin: 0 auto;
-      border: 1.5px solid #444; /* Darker grey border */
+      border: 1.5px solid #444;
       box-sizing: border-box;
-      box-shadow: 0 0 8px #444; /* Darker grey shadow */
+      box-shadow: 0 0 8px #444;
       padding: 0 0 6px 0;
       overflow: hidden;
-      /* Remove max-width/min-width, use fixed width to ensure border/shadow are visible */
     }
     .banner {
       width: 100%;
       position: relative;
       background: linear-gradient(90deg, #4588c1 0%, #1c314a 100%);
-      min-height: 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: flex-end;
     }
-    .banner-photo {
+    .banner-img-mask {
       width: 100%;
-      height: 48px; /* Adjust to your image height */
-      object-fit: cover;
+      height: 64px; /* Height of image area including curve area */
       display: block;
-      border-bottom: none;
-      /* No border here, it will blend into the gradient below */
+      position: relative;
+      z-index: 1;
+      /* Use mask for all modern browsers, fallback is just a normal image */
+      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="240" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 H240 V48 Q180,62 0,54 Z" fill="white"/></svg>');
+      mask-image: url('data:image/svg+xml;utf8,<svg width="240" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 H240 V48 Q180,62 0,54 Z" fill="white"/></svg>');
+      -webkit-mask-size: 240px 64px;
+      mask-size: 240px 64px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      object-fit: cover;
+      object-position: top center;
+      background: #234076;
     }
-    .banner-content {
+    .banner-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 48px; /* Only overlay the part above the curve */
+      z-index: 2;
       display: flex;
       align-items: center;
-      padding: 2px 6px 0 8px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      width: 100%;
-      height: 48px;
-      pointer-events: none; /* Makes sure it doesn't block image */
+      padding: 4px 8px 0 8px;
+      box-sizing: border-box;
+      pointer-events: none; /* So clicks go through */
     }
     .banner-logo {
       width: 32px;
@@ -65,8 +68,8 @@
       justify-content: center;
       overflow: hidden;
       border: 1px solid #444;
-      flex-shrink: 0;
       box-shadow: 0 0 2px #444;
+      flex-shrink: 0;
     }
     .banner-logo img {
       width: 26px;
@@ -84,14 +87,15 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    /* SVG curve style */
     .banner-curve {
       display: block;
       width: 100%;
       height: 16px;
       position: relative;
-      top: -2px;
-      z-index: 1;
+      top: -16px;
+      z-index: 3;
+      /* Ensures the line is above the image but below overlay */
+      pointer-events: none;
     }
     .content {
       padding: 0 8px;
@@ -125,19 +129,15 @@
 <body>
   <div class="container">
     <div class="banner">
-      <!-- Optional: Add your banner photo here! Replace 'bannerphoto.jpg' with your file. -->
-      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
-      
-      <!-- (Optional) Overlay logo/title on the banner photo. If you want ONLY the photo, you may remove this. -->
-      <!--
-      <div class="banner-content">
+      <!-- Banner photo, masked by SVG curve -->
+      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-img-mask">
+      <!-- Overlay: logo and title -->
+      <div class="banner-overlay">
         <div class="banner-logo">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
         </div>
         <span class="banner-title">My First Website</span>
       </div>
-      -->
-      
       <!-- SVG slanted curving gradient line with darker grey stroke -->
       <svg class="banner-curve" viewBox="0 0 240 16" preserveAspectRatio="none">
         <defs>
@@ -146,9 +146,9 @@
             <stop offset="100%" stop-color="#1c314a"/>
           </linearGradient>
         </defs>
-        <path d="M0,8 Q60,20 240,2 L240,16 L0,16 Z"
-              fill="url(#curveGradient)" />
-        <path d="M0,8 Q60,20 240,2" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
+        <!-- This path should match the mask curve for a seamless look -->
+        <path d="M0,0 H240 V8 Q180,16 0,14 Z" fill="url(#curveGradient)" />
+        <path d="M240,8 Q180,16 0,14" stroke="#444" stroke-width="2" fill="none" opacity="0.8"/>
       </svg>
     </div>
     <div class="content">
