@@ -35,7 +35,6 @@
       padding: 0 4px;
       box-sizing: border-box;
       line-height: 16px;
-      position: relative;
       /* No flex, no centering, just inline elements */
     }
     .banner-title {
@@ -47,21 +46,6 @@
       overflow: hidden;
       text-overflow: ellipsis;
       display: inline;
-      vertical-align: middle;
-    }
-    .flags {
-      position: absolute;
-      top: 2px;
-      right: 6px;
-      /* Make sure it doesn't push the title over */
-    }
-    .flag-link img {
-      width: 16px;
-      height: 11px;
-      display: inline;
-      border: 1px solid #eee;
-      background: #fff;
-      margin-left: 2px;
       vertical-align: middle;
     }
     .nav-bar {
@@ -119,14 +103,6 @@
     <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
     <div class="banner-bar">
       <span class="banner-title">My First Website</span>
-      <span class="flags">
-        <a href="index-nl.html" title="Nederlands" class="flag-link">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg" alt="NL">
-        </a>
-        <a href="index-fi.html" title="Suomi" class="flag-link">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg" alt="FI">
-        </a>
-      </span>
     </div>
     <div class="nav-bar">
       <a href="#" class="nav-btn">Home</a>
