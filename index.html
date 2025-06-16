@@ -30,8 +30,6 @@
       padding: 0;
       margin: 0;
       border-bottom: 2px solid #234076;
-      position: relative;
-      height: 32px;
       box-sizing: border-box;
     }
     .banner-title {
@@ -39,29 +37,31 @@
       font-size: 1.1em;
       font-weight: bold;
       margin: 0;
-      padding: 6px 0 6px 8px;
+      padding: 8px 0 6px 8px;
       text-align: left;
       display: block;
       line-height: 1.2;
     }
-    .nav-buttons {
-      position: absolute;
-      top: 6px;
-      right: 8px;
-      display: flex;
-      gap: 4px;
+    .nav-buttons-row {
+      width: 100%;
+      background: #2d27c4;
+      text-align: left;
+      padding: 0 0 4px 8px;
+      box-sizing: border-box;
     }
     .nav-btn {
       background: #234076;
       color: #fff;
       border: none;
       border-radius: 2px;
-      padding: 2px 6px;
+      padding: 2px 8px;
       font-size: 11px;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s;
+      margin-right: 6px;
+      margin-bottom: 2px;
       display: inline-block;
+      transition: background 0.2s;
     }
     .nav-btn:hover {
       background: #355899;
@@ -73,6 +73,7 @@
       margin: 0;
       padding: 0;
       border-bottom: 1px solid #234076;
+      box-sizing: border-box;
     }
     h1 {
       margin: 10px 0 4px 0;
@@ -107,11 +108,10 @@
   <div class="container">
     <div class="banner">
       <span class="banner-title">My first website</span>
-      <span class="nav-buttons">
-        <a href="#" class="nav-btn">Home</a>
+      <div class="nav-buttons-row">
         <a href="#" class="nav-btn">Projects</a>
         <a href="#" class="nav-btn">Photos</a>
-      </span>
+      </div>
     </div>
     <div class="nav-strip"></div>
     <div class="content">
