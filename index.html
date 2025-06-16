@@ -1,10 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>My First GitHub Pages Site</title>
+    <title>My Cool Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add some basic styles for a clean look -->
+    <style>
+      body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f8fb;
+        color: #222;
+      }
+      header {
+        background: #2d72d9;
+        color: white;
+        padding: 2rem 1rem 1rem 1rem;
+        text-align: center;
+      }
+      h1 {
+        margin: 0.5rem 0 0.2rem 0;
+      }
+      nav {
+        background: #244a7b;
+        padding: 0.5rem 0;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: #ffd700;
+      }
+      main {
+        max-width: 700px;
+        margin: 2rem auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.07);
+        padding: 2rem;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #eee;
+        color: #555;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>My First GitHub Pages Site</h1>
+    <header>
+      <h1>My Cool Website</h1>
+      <p>Welcome to my personal project on GitHub Pages!</p>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm learning programming and web development. This site is my playground for experimenting with HTML, CSS, and GitHub Pages.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+          <li><strong>Personal Website</strong> – This site, built from scratch!</li>
+          <li><strong>JavaScript Mini-Apps</strong> – Coming soon...</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          You can reach me via my <a href="https://github.com/kalle1992" target="_blank">GitHub profile</a>.
+        </p>
+      </section>
+    </main>
+    <footer>
+      &copy; 2025 kalle1992 | Built with HTML & CSS on GitHub Pages
+    </footer>
   </body>
 </html>
