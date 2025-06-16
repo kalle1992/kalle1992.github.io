@@ -2,117 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kallen verkkosivuilla</title>
-  <meta name="viewport" content="width=240, initial-scale=1, maximum-scale=1">
+  <title>Datsun Fans</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      width: 240px;
       font-family: Arial, sans-serif;
-      font-size: 11px;
-      background: #2d27c4;
-      color: #111;
-      min-height: 100vh;
+      background-color: #f2f2f2;
+      color: #000;
     }
-    .top-area {
-      width: 100%;
-      max-width: 240px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-      background: transparent;
+    .banner {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 5px 0;
     }
-    .banner-area {
-      width: 100%;
-      max-width: 240px;
-      position: relative;
-      margin: 0 auto;
-      background: transparent;
-    }
-    .banner-photo {
-      width: 100%;
-      height: 80px;
-      object-fit: cover;
+    .banner img {
+      width: 240px;
       display: block;
-      border-radius: 2px 2px 0 0;
     }
-    .banner-title {
-      position: absolute;
-      bottom: 18px; /* Moved title up slightly (was 12px) */
-      left: 12px;
-      color: #fff;
-      font-size: 1.05em;
+    .logo {
+      font-size: 18px;
       font-weight: bold;
-      background: rgba(35, 64, 118, 0.88);
-      padding: 4px 10px 3px 10px;
-      border-radius: 4px;
-      letter-spacing: 1px;
-      line-height: 1.1;
-    }
-    .container {
-      width: 100%;
-      max-width: 240px;
-      min-width: 0;
-      background: #fff;
-      margin: 0 auto;
-      border: 1px solid #aaa;
-      box-sizing: border-box;
-      box-shadow: 0 0 8px #567;
-      padding: 0 0 6px 0;
-      border-top: none;
-      border-radius: 0 0 8px 8px;
-      position: relative;
-      z-index: 0;
-      overflow: hidden;
+      padding: 5px 0;
     }
     .content {
-      padding: 0 8px;
+      padding: 5px;
+      background-color: #ffffff;
     }
-    h1 {
-      margin: 10px 0 4px 0;
-      color: #234076;
-      text-align: left;
-      font-size: 0.92em;
-      font-weight: bold;
-    }
-    h2 {
-      margin: 14px 0 6px 0;
-      color: #234076;
-      text-align: center;
-      font-size: 0.9em;
-    }
-    p {
-      line-height: 1.35;
-      margin-bottom: 7px;
-      font-size: 0.97em;
-    }
-    .footer {
-      text-align: center;
-      color: #234076;
-      font-size: 0.77em;
-      border-top: 1px solid #234076;
-      margin-top: 13px;
-      padding-top: 7px;
+    .box {
+      border: 1px solid #cccccc;
+      padding: 5px;
+      margin-top: 5px;
+      background-color: #e6e6e6;
     }
   </style>
 </head>
 <body>
-  <div class="top-area">
-    <div class="banner-area">
-      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
-      <span class="banner-title">Kallen verkkosivuilla</span>
+
+  <div class="banner">
+    <img src="bannerphoto.jpg" alt="Banner Image">
+    <div class="logo">DATSUN FANS</div>
+  </div>
+
+  <div class="content">
+    <div class="box">
+      <p>Welcome to the fan site! Here's some placeholder text.</p>
+    </div>
+
+    <div class="box">
+      <p>This layout is optimized for a Nokia 110 4G screen.</p>
+    </div>
+
+    <div class="box">
+      <p>Stay tuned for more vintage car content.</p>
     </div>
   </div>
-  <div class="container">
-    <div class="content">
-      <h1>Welcome to My Classic Site!</h1>
-      <p>This website is inspired by classic early-2000s web design.</p>
-      <h2>Changelog</h2>
-      <p>Stay tuned for updates!</p>
-    </div>
-    <div class="footer">
-      &copy; kesä 1995 Kalle | Made with GitHub Pages
-    </div>
-  </div>
+
 </body>
 </html>
