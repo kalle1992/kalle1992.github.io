@@ -23,20 +23,29 @@
       box-sizing: border-box;
       box-shadow: 0 0 8px #567;
       padding: 0 0 6px 0;
+      overflow: hidden;
     }
     .banner {
       width: 100%;
-      min-height: 36px;
+      position: relative;
       background: linear-gradient(90deg, #4588c1 0%, #1c314a 100%);
+      min-height: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-end;
+      /* No bottom border */
+    }
+    .banner-content {
       display: flex;
       align-items: center;
-      padding: 2px 6px;
-      box-sizing: border-box;
-      border-bottom: 2px solid #234076;
+      padding: 2px 6px 0 8px;
+      position: relative;
+      z-index: 2;
     }
     .banner-logo {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       background: #fff;
       border-radius: 50%;
       margin-right: 8px;
@@ -48,10 +57,9 @@
       flex-shrink: 0;
     }
     .banner-logo img {
-      max-width: 85%;
-      max-height: 85%;
+      width: 26px;
+      height: 26px;
       display: block;
-      margin: 0 auto;
     }
     .banner-title {
       color: #fff;
@@ -64,13 +72,14 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .nav-strip {
+    /* SVG curve style */
+    .banner-curve {
+      display: block;
       width: 100%;
-      background: #234076;
-      height: 8px;
-      margin: 0;
-      padding: 0;
-      border-bottom: 1px solid #234076;
+      height: 16px;
+      position: relative;
+      top: -2px;
+      z-index: 1;
     }
     .content {
       padding: 0 8px;
@@ -104,13 +113,26 @@
 <body>
   <div class="container">
     <div class="banner">
-      <div class="banner-logo">
-        <!-- Replace the SVG below with your own logo or remove if not needed -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
+      <div class="banner-content">
+        <div class="banner-logo">
+          <!-- Demo logo; replace with your own if desired -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
+        </div>
+        <span class="banner-title">My First Website</span>
       </div>
-      <span class="banner-title">My First Website</span>
+      <!-- SVG slanted curving gradient line -->
+      <svg class="banner-curve" viewBox="0 0 240 16" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="curveGradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#4588c1"/>
+            <stop offset="100%" stop-color="#1c314a"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,8 Q60,20 240,2 L240,16 L0,16 Z"
+              fill="url(#curveGradient)" />
+        <path d="M0,8 Q60,20 240,2" stroke="#fff" stroke-width="2" fill="none" opacity="0.5"/>
+      </svg>
     </div>
-    <div class="nav-strip"></div>
     <div class="content">
       <h1>Welcome to My Classic Site!</h1>
       <p>This website is inspired by classic early-2000s web design, just like the original My Summer Car site.</p>
