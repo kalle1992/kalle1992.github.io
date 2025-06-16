@@ -14,16 +14,15 @@
       color: #111;
     }
     .container {
-      width: 100%;
-      max-width: 240px;
-      min-width: 0;
+      width: 240px; /* Fixed width for 240px screens */
       background: #fff;
       margin: 0 auto;
-      border: 1px solid #aaa;
+      border: 1.5px solid #444; /* Darker grey border */
       box-sizing: border-box;
-      box-shadow: 0 0 8px #567;
+      box-shadow: 0 0 8px #444; /* Darker grey shadow */
       padding: 0 0 6px 0;
       overflow: hidden;
+      /* Remove max-width/min-width, use fixed width to ensure border/shadow are visible */
     }
     .banner {
       width: 100%;
@@ -34,14 +33,26 @@
       flex-direction: column;
       align-items: stretch;
       justify-content: flex-end;
-      /* No bottom border */
+    }
+    .banner-photo {
+      width: 100%;
+      height: 48px; /* Adjust to your image height */
+      object-fit: cover;
+      display: block;
+      border-bottom: none;
+      /* No border here, it will blend into the gradient below */
     }
     .banner-content {
       display: flex;
       align-items: center;
       padding: 2px 6px 0 8px;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
       z-index: 2;
+      width: 100%;
+      height: 48px;
+      pointer-events: none; /* Makes sure it doesn't block image */
     }
     .banner-logo {
       width: 32px;
@@ -53,8 +64,9 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border: 1px solid #234076;
+      border: 1px solid #444;
       flex-shrink: 0;
+      box-shadow: 0 0 2px #444;
     }
     .banner-logo img {
       width: 26px;
@@ -65,7 +77,7 @@
       color: #fff;
       font-size: 1.05em;
       font-weight: bold;
-      text-shadow: 1px 1px 2px #23407688;
+      text-shadow: 1px 1px 2px #444a;
       letter-spacing: 1px;
       flex-grow: 1;
       white-space: nowrap;
@@ -113,14 +125,20 @@
 <body>
   <div class="container">
     <div class="banner">
+      <!-- Optional: Add your banner photo here! Replace 'bannerphoto.jpg' with your file. -->
+      <img src="bannerphoto.jpg" alt="Banner Photo" class="banner-photo">
+      
+      <!-- (Optional) Overlay logo/title on the banner photo. If you want ONLY the photo, you may remove this. -->
+      <!--
       <div class="banner-content">
         <div class="banner-logo">
-          <!-- Demo logo; replace with your own if desired -->
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Circle-icons-car.svg" alt="Logo">
         </div>
         <span class="banner-title">My First Website</span>
       </div>
-      <!-- SVG slanted curving gradient line -->
+      -->
+      
+      <!-- SVG slanted curving gradient line with darker grey stroke -->
       <svg class="banner-curve" viewBox="0 0 240 16" preserveAspectRatio="none">
         <defs>
           <linearGradient id="curveGradient" x1="0" y1="0" x2="1" y2="0">
@@ -130,7 +148,7 @@
         </defs>
         <path d="M0,8 Q60,20 240,2 L240,16 L0,16 Z"
               fill="url(#curveGradient)" />
-        <path d="M0,8 Q60,20 240,2" stroke="#fff" stroke-width="2" fill="none" opacity="0.5"/>
+        <path d="M0,8 Q60,20 240,2" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
       </svg>
     </div>
     <div class="content">
