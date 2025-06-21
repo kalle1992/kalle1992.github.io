@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Klunker club vuokatti</title>
+  <title>My Vintage Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
@@ -33,19 +33,6 @@
       width: 100%;
       height: auto;
       display: block;
-    }
-    .flag-icons {
-      position: absolute;
-      top: 2px;
-      right: 2px;
-      display: flex;
-      gap: 2px;
-    }
-    .flag-icons img {
-      width: 16px;
-      height: 11px;
-      cursor: pointer;
-      border: 1px solid #444;
     }
     .title-bar {
       width: 100%;
@@ -97,31 +84,14 @@
       margin-top: 16px;
       padding-top: 8px;
     }
-    .lang-content {
-      display: none;
-    }
-    .lang-content.active {
-      display: block;
-    }
   </style>
-  <script>
-    function showLanguage(lang) {
-      const sections = document.querySelectorAll('.lang-content');
-      sections.forEach(s => s.classList.remove('active'));
-      document.getElementById(lang).classList.add('active');
-    }
-  </script>
 </head>
 <body>
   <div class="container">
     <div class="banner">
       <img src="bannerphoto.jpg" alt="Banner">
-      <div class="flag-icons">
-        <img src="https://flagcdn.com/fi.svg" alt="Finnish" onclick="showLanguage('fi')">
-        <img src="https://flagcdn.com/nl.svg" alt="Dutch" onclick="showLanguage('nl')">
-      </div>
     </div>
-    <div class="title-bar">Klunker club Vuokatti</div>
+    <div class="title-bar">My Vintage Site</div>
     <div class="nav">
       <a href="#" onclick="showPage('home')">Home</a>
       <a href="#" onclick="showPage('about')">About</a>
@@ -129,22 +99,10 @@
     </div>
     <div class="content">
       <div id="home" class="page">
-        <div id="en" class="lang-content active">
-          <h1>Welcome to My Classic Site!</h1>
-          <p>This website is inspired by classic early-2000s web design.</p>
-          <h2>News</h2>
-          <p>Stay tuned for updates and new downloads!</p>
-        </div>
-        <div id="fi" class="lang-content">
-          <!-- Finnish translation goes here -->
-          <h1>Tervetuloa klassiselle sivustolleni!</h1>
-          <p>[Kirjoita suomenkielinen sisältö tähän]</p>
-        </div>
-        <div id="nl" class="lang-content">
-          <!-- Dutch translation goes here -->
-          <h1>Welkom op mijn klassieke site!</h1>
-          <p>[Schrijf hier de Nederlandse inhoud]</p>
-        </div>
+        <h1>Welcome to My Classic Site!</h1>
+        <p>This website is inspired by classic early-2000s web design.</p>
+        <h2>News</h2>
+        <p>Stay tuned for updates and new downloads!</p>
       </div>
       <div id="about" class="page" style="display:none">
         <p>[About page content goes here]</p>
@@ -154,7 +112,7 @@
       </div>
     </div>
     <div class="footer">
-      &copy; 1995 Kalle | Nokia 110 4g optimized
+      &copy; 1995 Your Name | Mobile retro edition
     </div>
   </div>
 
