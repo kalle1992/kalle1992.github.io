@@ -1,88 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>My first website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>My Vintage Site</title>
   <style>
     body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        background: #2d27c4;
-        color: #111;
+      background-color: #c0c0c0;
+      font-family: 'Times New Roman', serif;
+      color: #000000;
+      margin: 0;
     }
     .container {
-      width: 100%;
-      max-width: 240px;
-      min-width: 0;
-      background: #fff;
+      width: 800px;
       margin: 0 auto;
-      border: 1px solid #aaa;
-      box-sizing: border-box;
-      box-shadow: 0 0 8px #567;
-      padding: 0 0 6px 0;
+      background-color: #ffffff;
+      border: 3px double #000000;
+      padding: 10px;
     }
-    .banner {
-      width: 100%;
-      height: 16px; /* Less big */
-      background: #2d27c4;
-      border-bottom: 2px solid #234076;
-    }
-    .title-bar {
-      width: 100%;
-      background: #2d27c4;
-      color: #fff;
-      font-size: 1.1em;
-      font-weight: bold;
-      margin: 0;
-      text-align: left;
-      padding: 6px 0 6px 8px;
-      box-sizing: border-box;
-      border-bottom: 1px solid #234076;
-    }
-    h1 {
-      margin: 10px 0 4px 0;
-      color: #234076;
-      text-align: left;
-      font-size: 1em;
-    }
-    h2 {
-      margin: 14px 0 6px 0;
-      color: #234076;
+    .header {
+      background-color: #000080;
+      color: #ffffff;
       text-align: center;
-      font-size: 0.95em;
+      padding: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 2px dashed #ffffff;
+    }
+    .nav {
+      background-color: #f0f0f0;
+      padding: 5px;
+      text-align: center;
+    }
+    .nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #000080;
+      font-weight: bold;
     }
     .content {
-      padding: 0 8px;
-    }
-    p {
-      line-height: 1.4;
-      margin-bottom: 8px;
+      padding: 10px;
     }
     .footer {
+      font-size: 12px;
       text-align: center;
-      color: #234076;
-      font-size: 0.8em;
-      border-top: 1px solid #234076;
-      margin-top: 16px;
-      padding-top: 8px;
+      border-top: 1px dotted #000;
+      margin-top: 10px;
+      color: #333;
+    }
+    .sidebar {
+      background-color: #e0e0e0;
+      padding: 10px;
+      border: 1px solid #000;
+      font-family: Courier, monospace;
+      margin-top: 10px;
+    }
+    img {
+      border: 2px solid #000;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="banner"></div>
-    <div class="title-bar">My first website</div>
+    <div class="header">
+      WELCOME TO MY SITE!
+    </div>
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Photos</a>
+      <a href="#">Guestbook</a>
+      <a href="#">Links</a>
+    </div>
     <div class="content">
-      <h1>Welcome to My Classic Site!</h1>
-      <p>This website is inspired by classic early-2000s web design.</p>
-      <h2>News</h2>
-      <p>Stay tuned for updates and new downloads!</p>
+      <h2>Latest Updates - June 2025</h2>
+      <p><img src="https://www.animatedimages.org/data/media/54/animated-computer-image-0087.gif" alt="Computer" width="80" align="left" style="margin-right:10px;">Welcome to my retro-style website! This is just a placeholder for your awesome vintage content. Replace this text with something more personal or interesting about your topic!</p>
+      <div class="sidebar">
+        <strong>News Flash!</strong><br>
+        New images added to the gallery! Check out the PHOTOS section.<br>
+        Don't forget to sign my guestbook!
+      </div>
     </div>
     <div class="footer">
-      &copy; 1995 Kalle | Made with GitHub Pages
+      &copy; 2025 My Vintage Site | Best viewed in Netscape Navigator 4.0 or Internet Explorer 5.5<br>
+      <img src="https://www.animatedimages.org/data/media/512/animated-under-construction-image-0023.gif" alt="Under Construction" width="100">
     </div>
   </div>
 </body>
