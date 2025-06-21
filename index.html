@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Klunker club</title>
+  <title>Klunker Club Vuokatti</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
@@ -65,18 +65,6 @@
       line-height: 1.4;
       margin-bottom: 8px;
     }
-    .nav {
-      text-align: center;
-      margin: 10px 0;
-    }
-    .nav a {
-      display: inline-block;
-      font-size: 12px;
-      margin: 0 5px;
-      text-decoration: underline;
-      color: #234076;
-      cursor: pointer;
-    }
     .footer {
       text-align: center;
       color: #234076;
@@ -98,41 +86,25 @@
     <div class="banner">
       <img src="bannerphoto.jpg" alt="Banner">
     </div>
-    <div class="title-bar">My Vintage Site</div>
-    <div class="nav">
-      <a onclick="showPage('home')">Home</a>
-      <a onclick="showPage('about')">About</a>
-      <a onclick="showPage('photos')">Photos</a>
-    </div>
+    <div class="title-bar">Klunker Club Vuokatti</div>
     <div class="content">
-      <div id="home" class="page">
-        <h1>Welcome to My Classic Site!</h1>
-        <p>This website is inspired by classic early-2000s web design.</p>
-        <h2>News</h2>
-        <p>Stay tuned for updates and new downloads!</p>
-      </div>
-      <div id="about" class="page" style="display:none">
-        <h1>About This Site</h1>
-        <p>This is a retro-styled website made for small screens, like a 240x320 Nokia phone.</p>
-        <p>You can edit this text inside the <code>about</code> section of the HTML file.</p>
-      </div>
-      <div id="photos" class="page" style="display:none">
-        <h1>Photo Gallery</h1>
-        <img src="photo1.jpg" alt="Photo 1" class="photo">
-        <img src="photo2.jpg" alt="Photo 2" class="photo">
-        <p>You can add more photos by inserting <code>&lt;img src="yourphoto.jpg" class="photo"&gt;</code> here.</p>
-      </div>
+      <h1>Welcome to the official Klunker Club site!</h1>
+      <p>This website is about my Klunker bicycle.</p>
+      <h2>News</h2>
+      <p>Stay tuned for updates and new downloads!</p>
+
+      <h1>About This Site</h1>
+      <p>This is a retro-styled website made for small screens, like a 240x320 Nokia phone.</p>
+      <p>You can edit this text inside the HTML file directly.</p>
+
+      <h1>Photo Gallery</h1>
+      <img src="photo1.jpg" alt="Photo 1" class="photo">
+      <img src="photo2.jpg" alt="Photo 2" class="photo">
+      <p>You can add more photos by inserting <code>&lt;img src="yourphoto.jpg" class="photo"&gt;</code> here.</p>
     </div>
     <div class="footer">
-      &copy; 1995 Kalle | Optimized for Nokia 110 4G
+      &copy; 1995 Kalle | OperaMini Optimized
     </div>
   </div>
-
-  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
-      document.getElementById(pageId).style.display = 'block';
-    }
-  </script>
 </body>
 </html>
