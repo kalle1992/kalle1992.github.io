@@ -26,22 +26,18 @@
     }
     .banner {
       width: 100%;
-      height: 24px;
-      background: linear-gradient(90deg, #1e3c72, #2a5298);
-      border-bottom: 2px solid #234076;
+      height: auto;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 4px;
-      box-sizing: border-box;
     }
-    .banner-text {
-      font-size: 10px;
-      color: #fff;
-      text-shadow: 1px 1px 0 #000;
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .flag-icons {
+      position: absolute;
+      top: 2px;
+      right: 2px;
       display: flex;
       gap: 2px;
     }
@@ -119,7 +115,7 @@
 <body>
   <div class="container">
     <div class="banner">
-      <div class="banner-text">~ Welcome ~</div>
+      <img src="bannerphoto.jpg" alt="Banner">
       <div class="flag-icons">
         <img src="https://flagcdn.com/fi.svg" alt="Finnish" onclick="showLanguage('fi')">
         <img src="https://flagcdn.com/nl.svg" alt="Dutch" onclick="showLanguage('nl')">
