@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ROS — Jouw stalen ros, op maat gemaakt</title>
+    <title>ROS — Stalen Rossen op maat</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -13,71 +13,110 @@
       body {
         font-family: 'Roboto', sans-serif;
       }
+      .clip-path-polygon {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeElems = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        });
+        fadeElems.forEach(elem => observer.observe(elem));
+      });
+    </script>
   </head>
   <body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
-    <header class="bg-white shadow-md">
-      <div class="container mx-auto flex items-center justify-between p-4">
-        <img src="ROSvector.svg" alt="ROS Logo" class="h-12">
-        <nav class="space-x-6">
-          <a href="#home" class="hover:text-red-600">Thuis</a>
-          <a href="#over" class="hover:text-red-600">Over</a>
-          <a href="#proces" class="hover:text-red-600">Het proces</a>
-          <a href="#gallerij" class="hover:text-red-600">Gallerij</a>
-          <a href="#contact" class="hover:text-red-600">Contact</a>
+    <header class="bg-white shadow-md relative">
+      <div class="container mx-auto flex items-center justify-between p-4 relative">
+        <img src="ROSvector.svg" alt="ROS Logo" class="h-20 absolute -top-4 left-4">
+        <nav class="space-x-6 ml-24">
+          <a href="#home" class="hover:text-green-700">Thuis</a>
+          <a href="#over" class="hover:text-green-700">Over</a>
+          <a href="#proces" class="hover:text-green-700">Het proces</a>
+          <a href="#gallerij" class="hover:text-green-700">Gallerij</a>
+          <a href="#contact" class="hover:text-green-700">Contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-red-600 text-white py-20 text-center clip-path-polygon">
+    <section id="home" class="bg-[#46653F] text-white py-20 text-center clip-path-polygon">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">ROS — Jouw stalen ros, op maat gemaakt</h1>
       <p class="text-lg md:text-xl max-w-2xl mx-auto">Bij ROS geloven we dat elk stalen ros uniek moet zijn. Van ontwerp tot afwerking: volledig op maat en met vakmanschap gebouwd.</p>
+      <p class="mt-6 text-xl italic">Wij maken een frame op maat, jij maakt het avontuur</p>
     </section>
 
     <!-- Over -->
-    <section id="over" class="py-16 container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-      <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold mb-6">Over ROS</h2>
-        <p class="mb-4">ROS is gespecialiseerd in het ontwerpen en bouwen van op maat gemaakte stalen fietsen — oftewel 'stalen rossen'. Wij combineren traditionele ambacht met moderne technieken, zodat je een fiets krijgt die niet alleen functioneel is, maar ook een verlengstuk van jouw persoonlijkheid.</p>
-        <p>Met jarenlange ervaring en passie voor staal zorgt onze oprichter ervoor dat elk project een kunstwerk op wielen wordt.</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="22b2c353-37e1-4520-a47f-ec4d2b5253fc.JPG" alt="Eigenaar ROS aan het werk" class="rounded-lg shadow-lg object-cover">
+    <section id="over" class="py-16 container mx-auto px-4 fade-in">
+      <h2 class="text-3xl font-bold mb-6">Over ROS</h2>
+      <h3 class="text-xl font-semibold mb-4">Het vakmanschap van ROS in de praktijk</h3>
+      <p class="mb-4">De grote reis van eigenaar Jurriaan, die samen met zijn vrouw Linda meer dan 12.000 kilometer heeft gefietst door de barre omstandigheden van Zuid-Amerika, staat aan de basis van ROS. Alles om ervoor te zorgen dat een maatframe van ROS bestand is tegen jouw avontuur.</p>
+      <p class="mb-6">Voor wie is een maatframe? Als je klaar bent met carbonfietsen die ontworpen zijn om verkocht te worden en niet om op gereden te worden. Als je pijn ervaart tijdens het fietsen, kan een maatframe de oplossing zijn die je zoekt.</p>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <p>ROS is gespecialiseerd in op maat gemaakte stalen fietsen die niet alleen functioneel zijn, maar ook jouw persoonlijkheid weerspiegelen. Met passie en precisie bouwen we elk frame als een kunstwerk op wielen.</p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="22b2c353-37e1-4520-a47f-ec4d2b5253fc.JPG" alt="Eigenaar ROS aan het werk" class="rounded-lg shadow-lg object-cover w-full md:w-4/5">
+        </div>
       </div>
     </section>
 
     <!-- Het proces -->
-    <section id="proces" class="bg-gray-100 py-16 container mx-auto px-4">
+    <section id="proces" class="bg-gray-100 py-16 container mx-auto px-4 fade-in">
       <h2 class="text-3xl font-bold mb-6 text-center">Het proces</h2>
+      <p class="mb-10 text-center">Elke fiets begint met een nauwkeurige passing op een pasfiets. Daarna maken we een digitaal model van je droomfiets (zie afbeelding hieronder). Vervolgens wordt het frame vervaardigd uit het hoogste kwaliteit chromolydeen staal en verbonden door fillet brazing. Dit zorgt voor een licht en uiterst sterk frame.</p>
+      <div class="flex justify-center mb-10">
+        <img src="eed8288a-b63b-4779-9052-642c0d9a0eab.JPG" alt="3D model fiets" class="rounded shadow-md w-full md:w-1/2">
+      </div>
       <div class="grid md:grid-cols-5 gap-6 text-center">
-        <div><h3 class="text-xl font-semibold mb-2">1</h3><p>Intake & wensen</p></div>
-        <div><h3 class="text-xl font-semibold mb-2">2</h3><p>Ontwerp & 3D-visualisatie</p></div>
-        <div><h3 class="text-xl font-semibold mb-2">3</h3><p>Handmatig lassen</p></div>
-        <div><h3 class="text-xl font-semibold mb-2">4</h3><p>Afwerking & personalisatie</p></div>
-        <div><h3 class="text-xl font-semibold mb-2">5</h3><p>Levering & finetuning</p></div>
+        <div class="hover-scale"><h3 class="text-xl font-semibold mb-2">1</h3><p>Intake & wensen</p></div>
+        <div class="hover-scale"><h3 class="text-xl font-semibold mb-2">2</h3><p>Passing op pasfiets</p></div>
+        <div class="hover-scale"><h3 class="text-xl font-semibold mb-2">3</h3><p>3D ontwerp & validatie</p></div>
+        <div class="hover-scale"><h3 class="text-xl font-semibold mb-2">4</h3><p>Vervaardiging & fillet brazing</p></div>
+        <div class="hover-scale"><h3 class="text-xl font-semibold mb-2">5</h3><p>Afwerking & aflevering</p></div>
       </div>
     </section>
 
     <!-- Gallerij -->
-    <section id="gallerij" class="py-16 container mx-auto px-4">
+    <section id="gallerij" class="py-16 container mx-auto px-4 fade-in">
       <h2 class="text-3xl font-bold mb-6 text-center">Gallerij</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale">
           <img src="jouw-foto-1.jpg" alt="Stalen ros 1" class="w-full h-48 object-cover">
         </div>
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale">
           <img src="jouw-foto-2.jpg" alt="Stalen ros 2" class="w-full h-48 object-cover">
         </div>
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale">
           <img src="jouw-foto-3.jpg" alt="Stalen ros 3" class="w-full h-48 object-cover">
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="bg-red-600 text-white py-16 text-center px-4">
+    <section id="contact" class="bg-[#46653F] text-white py-16 text-center px-4 fade-in">
+      <img src="ROSvector.svg" alt="ROS Logo" class="h-16 mx-auto mb-4">
       <h2 class="text-3xl font-bold mb-6">Contact</h2>
       <p class="max-w-2xl mx-auto mb-4">Vraag vrijblijvend een offerte aan of maak een afspraak. Stuur een mail naar <a href="mailto:info@ros.nl" class="underline">info@ros.nl</a> of bel ons op <a href="tel:+310612345678" class="underline">+31 06 12345678</a>.</p>
     </section>
@@ -86,11 +125,5 @@
     <footer class="bg-gray-800 text-gray-100 py-6 text-center">
       <p>&copy; 2025 ROS — Alle rechten voorbehouden.</p>
     </footer>
-
-    <style>
-      .clip-path-polygon {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      }
-    </style>
   </body>
 </html>
