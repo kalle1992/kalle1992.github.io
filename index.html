@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ROS — Stalen Rossen op maat</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+      h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
   </head>
   <body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
@@ -16,40 +25,45 @@
           <a href="#over" class="hover:text-red-600">Over</a>
           <a href="#proces" class="hover:text-red-600">Het proces</a>
           <a href="#gallerij" class="hover:text-red-600">Gallerij</a>
+          <a href="#contact" class="hover:text-red-600">Contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-red-600 text-white py-20 text-center">
+    <section id="home" class="bg-red-600 text-white py-20 text-center clip-path-polygon">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">ROS — Jouw stalen ros, op maat gemaakt</h1>
       <p class="text-lg md:text-xl max-w-2xl mx-auto">Bij ROS geloven we dat elk stalen ros uniek moet zijn. Van ontwerp tot afwerking: volledig op maat en met vakmanschap gebouwd.</p>
     </section>
 
     <!-- Over -->
-    <section id="over" class="py-16 container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Over ROS</h2>
-      <p class="mb-4">ROS is gespecialiseerd in het ontwerpen en bouwen van op maat gemaakte stalen fietsen — oftewel 'stalen rossen'. Wij combineren traditionele ambacht met moderne technieken, zodat je een fiets krijgt die niet alleen functioneel is, maar ook een verlengstuk van jouw persoonlijkheid.</p>
-      <p>Met jarenlange ervaring en passie voor staal zorgen we ervoor dat elk project een kunstwerk op wielen wordt.</p>
+    <section id="over" class="py-16 container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-6">Over ROS</h2>
+        <p class="mb-4">ROS is gespecialiseerd in het ontwerpen en bouwen van op maat gemaakte stalen fietsen — oftewel 'stalen rossen'. Wij combineren traditionele ambacht met moderne technieken, zodat je een fiets krijgt die niet alleen functioneel is, maar ook een verlengstuk van jouw persoonlijkheid.</p>
+        <p>Met jarenlange ervaring en passie voor staal zorgt onze oprichter ervoor dat elk project een kunstwerk op wielen wordt.</p>
+      </div>
+      <div class="md:w-1/2">
+        <img src="22b2c353-37e1-4520-a47f-ec4d2b5253fc.JPG" alt="Eigenaar ROS aan het werk" class="rounded-lg shadow-lg object-cover">
+      </div>
     </section>
 
     <!-- Het proces -->
     <section id="proces" class="bg-gray-100 py-16 container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Het proces</h2>
-      <ol class="list-decimal list-inside space-y-4">
-        <li>Intake en wensen bespreken</li>
-        <li>Ontwerp en 3D-visualisatie</li>
-        <li>Handmatig lassen en bouwen</li>
-        <li>Afwerking en personalisatie</li>
-        <li>Levering en finetuning</li>
-      </ol>
+      <h2 class="text-3xl font-bold mb-6 text-center">Het proces</h2>
+      <div class="grid md:grid-cols-5 gap-6 text-center">
+        <div><h3 class="text-xl font-semibold mb-2">1</h3><p>Intake & wensen</p></div>
+        <div><h3 class="text-xl font-semibold mb-2">2</h3><p>Ontwerp & 3D-visualisatie</p></div>
+        <div><h3 class="text-xl font-semibold mb-2">3</h3><p>Handmatig lassen</p></div>
+        <div><h3 class="text-xl font-semibold mb-2">4</h3><p>Afwerking & personalisatie</p></div>
+        <div><h3 class="text-xl font-semibold mb-2">5</h3><p>Levering & finetuning</p></div>
+      </div>
     </section>
 
     <!-- Gallerij -->
     <section id="gallerij" class="py-16 container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Gallerij</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center">Gallerij</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Plaats hier je eigen foto's -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           <img src="jouw-foto-1.jpg" alt="Stalen ros 1" class="w-full h-48 object-cover">
         </div>
@@ -59,13 +73,24 @@
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           <img src="jouw-foto-3.jpg" alt="Stalen ros 3" class="w-full h-48 object-cover">
         </div>
-        <!-- Voeg meer toe naar wens -->
       </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-red-600 text-white py-16 text-center px-4">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p class="max-w-2xl mx-auto mb-4">Vraag vrijblijvend een offerte aan of maak een afspraak. Stuur een mail naar <a href="mailto:info@ros.nl" class="underline">info@ros.nl</a> of bel ons op <a href="tel:+310612345678" class="underline">+31 06 12345678</a>.</p>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-100 py-6 text-center">
       <p>&copy; 2025 ROS — Alle rechten voorbehouden.</p>
     </footer>
+
+    <style>
+      .clip-path-polygon {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+    </style>
   </body>
 </html>
